@@ -8,6 +8,6 @@ jobs:
       - name: Install update
         run: sudo apt update -y
       - name: Install dependencies
-        run: npm install
+        run: sudo apt install nginx -y
       - name: Run tests
-        run: npm test
+        run: sudo systemctl start nginx
