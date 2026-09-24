@@ -20,6 +20,7 @@ jobs:
           curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -o cloudflared.deb
           sudo dpkg -i cloudflared.deb
           cloudflared --version
+          sudo apt install sshpass -y
 
       - name: Install sshpass
         run: sudo apt-get update -y && sudo apt-get install -y sshpass
